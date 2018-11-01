@@ -70,11 +70,11 @@ input.display-switch:not(:checked) + label[for='switcher']::after
     margin-top: 0;
 }
 
-.cat-card h2
+.display-switch:checked ~ main .cat-card h2
 {
-    display: inline-block;
-    /*width: 200px;*/
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .display-switch:checked ~ main .description
