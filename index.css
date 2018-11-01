@@ -1,0 +1,124 @@
+body
+{
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+header
+{
+    text-align: center;
+}
+
+input.display-switch
+{
+    display: none;
+}
+
+label[for='switcher']::after
+{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    background: url('images/threelines.png') no-repeat;
+}
+
+input.display-switch:not(:checked) + label[for='switcher']::after
+{
+    transform: rotate(90deg);
+}
+
+.cat-card
+{
+    margin: 30px auto;
+    border: 2px solid black;
+    width: 500px;
+}
+
+.cat-card > img
+{
+    width: 100%;
+}
+
+.cat-card .age::before
+{
+    content: 'Возраст: ';
+}
+
+.cat-card .breed::before
+{
+    content: 'Порода: ';
+}
+
+.cat-card .status::before
+{
+    content: 'Статус: ';
+}
+
+.cat-card > .info
+{
+    padding: 0 20px 20px;
+}
+
+.cat-card > .info > p
+{
+    margin-bottom: 0;
+}
+
+.cat-card > .info > p:not(:last-child)
+{
+    margin-top: 0;
+}
+
+.cat-card h2
+{
+    display: inline-block;
+    /*width: 200px;*/
+    overflow: hidden;
+}
+
+.display-switch:checked ~ main .description
+{
+    display: none;
+}
+
+.display-switch:checked ~ main .cat-card
+{
+    width: 250px;
+    display: inline-block;
+    margin: 6px 3px;
+}
+
+.display-switch:checked ~ main .cat-card:hover
+{
+    position: relative;
+    top: -5px;
+    left: -5px;
+    box-shadow: 5px 5px #202020;
+}
+
+main .cat-card img
+{
+    opacity: .8;
+}
+
+main .cat-card img:hover
+{
+    opacity: 1;
+}
+
+a.name-link
+{
+    color: black;
+}
+
+a.name-link:hover
+{
+    color: #6698ff;
+}
+
+.cat-card > .info > p:hover
+{
+    opacity: .8;
+    cursor: default;
+}
